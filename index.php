@@ -32,7 +32,7 @@
 				while($PAGE = readdir($COMIC_ISSUE)) {
 					if ($PAGE != '.' && $PAGE != '..' && $PAGE != 'renamed') {
 						$SIZE = GetImageSize("./comics/" . $COMICS[$INDEX] . "/" . $PAGE);
-						if ($SIZE[0] > $SIZE[1]) {
+						if ($PAGE_NUMBER > 1 && $SIZE[0] > $SIZE[1]) {
 							$NEXT_PAGE_NUMBER = $PAGE_NUMBER + 1;
 							if ($NEXT_PAGE_NUMBER < 10) {
 								if ($PAGES >= 100) {
